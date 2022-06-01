@@ -1,0 +1,12 @@
+$main_color: var(--main_color);
+
+.submitter {
+    border: 1px solid $main_color;
+    border-radius: 5px;
+    padding: 0px 10px;
+
+    legend {
+        width: 155px;
+        font-size: 17px;
+    }
+}

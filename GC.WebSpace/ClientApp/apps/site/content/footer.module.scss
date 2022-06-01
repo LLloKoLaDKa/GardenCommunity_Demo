@@ -1,0 +1,25 @@
+.footer {
+    display: flex;
+    align-items: center;
+    background: white;
+    justify-content: center;
+    min-height: 50px;
+    border-top: 1px solid lightgray;
+    gap: 10px;
+    padding: 0px 5px;
+
+    @media screen and (max-width: 665px) {
+        gap: 0px;
+        flex-direction: column;
+    }
+}
+
+.link {
+    color: var(--main_color);
+    cursor: pointer;
+    background-color: white;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

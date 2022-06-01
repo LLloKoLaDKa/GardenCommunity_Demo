@@ -1,0 +1,9 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+User-agent: *
+Allow: /
+Disallow: /lib/
+Disallow: /dist/
+
+Sitemap: http://polesye-lipitino.ru/sitemap.xml

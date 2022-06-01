@@ -1,0 +1,23 @@
+.contributions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    .member_contribution,
+    .target_contribution {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+
+        .contribution_title {
+            font-weight: 500;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .contribution {
+            display: flex;
+        }
+    }
+}

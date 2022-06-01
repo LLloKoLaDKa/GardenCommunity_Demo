@@ -1,0 +1,43 @@
+.news {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+
+    .ad {
+        cursor: pointer;
+        width: calc((100% - 40px) / 3);
+
+        @media screen and (max-width: 700px) {
+            width: calc((100% - 20px) / 2);
+        }
+
+        @media screen and (max-width: 550px) {
+            width: 100%;
+        }
+
+        .ad_title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .ad_date {
+            color: gray;
+        }
+
+        img {
+            height: 150px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

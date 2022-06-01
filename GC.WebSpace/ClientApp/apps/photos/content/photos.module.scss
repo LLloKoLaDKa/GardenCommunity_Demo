@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .photo {
+        width: calc((100% - 30px) / 4);
+        border: 1px solid var(--main_color);
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (max-width: 900px) {
+            width: calc((100% - 20px) / 3);
+        }
+
+        @media screen and (max-width: 700px) {
+            width: calc((100% - 10px) / 2);
+        }
+
+        @media screen and (max-width: 500px) {
+            width: 100%;
+        }
+
+        .control {
+            height: 38px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid var(--main_color);
+            background: var(--main_color);
+            color: white;
+            transition: 0.4s;
+            cursor: pointer;
+
+            &:hover {
+                background: var(--main_color_50);
+            }
+        }
+    }
+}

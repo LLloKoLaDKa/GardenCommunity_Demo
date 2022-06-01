@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Configurations>Staging;Development;Production</Configurations>
+	  <AssemblyVersion>$([System.DateTime]::Now.ToString("yyyy.MM.dd.HHmm"))</AssemblyVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Services\Groups\**" />
+    <EmbeddedResource Remove="Services\Groups\**" />
+    <None Remove="Services\Groups\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GC.Tools\GC.Tools.csproj" />
+  </ItemGroup>
+
+</Project>

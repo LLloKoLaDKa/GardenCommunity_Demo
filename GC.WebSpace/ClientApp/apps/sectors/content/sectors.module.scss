@@ -1,0 +1,77 @@
+$TEXT: var(--text_color);
+$MAIN: var(--main_color);
+
+.filters {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    @media screen and (max-width: 550px) {
+        flex-direction: column;
+    }
+
+    fieldset {
+        flex: 1
+    }
+}
+
+.dataholder {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .sale {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10px;
+        color: $TEXT;
+        background: $MAIN;
+        min-width: calc((100% - 30px) / 4);
+        transition: 0.4s;
+        cursor: pointer;
+        justify-content: space-between;
+
+        &:hover {
+            box-shadow: 0px 2px 10px 0px rgb(41 59 90);
+        }
+
+        @media screen and (max-width: 960px) {
+            width: calc((100% - 10px) / 2);
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px 20px 10px 20px;
+
+            .title {
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+
+        .delete {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            width: 100%;
+            background: $TEXT;
+            color: $MAIN;
+            border-radius: 0px 0px 10px 10px;
+            border: 3px solid;
+            transition: 0.4s;
+
+            &:hover {
+                background-color: rgba(256, 256, 256, 0.7)
+            }
+        }
+    }
+}

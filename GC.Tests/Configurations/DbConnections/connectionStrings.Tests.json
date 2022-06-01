@@ -1,0 +1,3 @@
+{
+  "ConnectionString": "Server=localhost;Username=npgsql_tests;Database=garden_tests;Port=5432;Password=npgsql_tests"
+}

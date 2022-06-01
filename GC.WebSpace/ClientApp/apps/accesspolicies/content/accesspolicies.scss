@@ -1,0 +1,65 @@
+$delete-button-color: var(--delete-color);
+$text_color: var(--text_color);
+
+.access-policies-block {
+    border: 1px solid var(--main_color);
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+
+    legend {
+        width: auto;
+        padding: 0px 5px;
+        margin: 0;
+    }
+}
+
+.title-editor {
+    display: flex;
+    align-items: center;
+
+    label {
+        margin: 0;
+        margin-right: 10px;
+    }
+}
+
+.cancel-button {
+    .plus {
+        transform: rotate(45deg);
+    }
+}
+
+.delete-button {
+    background-color: $delete-button-color;
+    border-color: $delete-button-color;
+    color: $text_color;
+
+    &:hover {
+        border-color: $delete-button-color;
+        background-color: transparent;
+        color: $delete-button-color;
+    }
+
+    &:active {
+        background-color: $delete-button-color;
+        border-color: $delete-button-color;
+        color: $text_color;
+    }
+}
+
+.selector {
+    display: flex;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+#select {
+    margin-right: 10px;
+}
+
+.d-flex {
+    flex-wrap: wrap;
+    align-items: center;
+}

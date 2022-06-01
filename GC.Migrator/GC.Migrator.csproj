@@ -1,0 +1,128 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <Configurations>Staging;Development;Production</Configurations>
+	  <AssemblyVersion>$([System.DateTime]::Now.ToString("yyyy.MM.dd.HHmm"))</AssemblyVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+    <None Remove="Migrations\202205\SqlScripts\202205212250_createtable_users.sql" />
+    <None Remove="Migrations\202205\SqlScripts\202205212251_createtable_userpermissions.sql" />
+    <None Remove="Migrations\202205\SqlScripts\202205212252_createtable_usertokens.sql" />
+    <None Remove="Migrations\202205\SqlScripts\202205212253_createtable_photos.sql" />
+    <None Remove="Migrations\202205\SqlScripts\202205220723_createtable_useraccessroles.sql" />
+    <None Remove="Migrations\202205\SqlScripts\202205220724_createtable_sectors.sql" />
+    <None Remove="Migrations\202205\SqlScripts\202205220725_createtable_gardeners.sql" />
+    <None Remove="Migrations\202205\SqlScripts\202205220726_createtable_novelties.sql" />
+    <None Remove="Migrations\202205\SqlScripts\202205220727_createtable_ads.sql" />
+    <None Remove="Migrations\202205\SqlScripts\202205220732_createtable_sectorsales.sql" />
+    <None Remove="Migrations\202205\SqlScripts\202205220733_createtable_sectorcredits.sql" />
+    <None Remove="Migrations\202205\SqlScripts\202205220735_createtable_appeals.sql" />
+    <None Remove="Migrations\202205\SqlScripts\202205220819_createtable_gardencontacts.sql" />
+    <None Remove="Migrations\202205\SqlScripts\202205220824_createtable_emergencycontacts.sql" />
+    <None Remove="Migrations\202205\SqlScripts\202205220835_createtable_configurationsettings.sql" />
+    <None Remove="Migrations\202205\SqlScripts\202205220922_insertdata_superuser.sql" />
+    <None Remove="Migrations\202205\SqlScripts\202205220949_createtable_foreigncontacts.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="..\Configurations\DbConnections\connectionStrings.Development.json" Link="Configurations\DbConnections\connectionStrings.Development.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Configurations\DbConnections\connectionStrings.Production.json" Link="Configurations\DbConnections\connectionStrings.Production.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Configurations\DbConnections\connectionStrings.Staging.json" Link="Configurations\DbConnections\connectionStrings.Staging.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\GC.Tests\Configurations\DbConnections\connectionStrings.Tests.json" Link="Configurations\DbConnections\connectionStrings.Tests.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Migrations\202205\SqlScripts\202205212253_createtable_photos.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\202205\SqlScripts\202205212250_createtable_users.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\202205\SqlScripts\202205212251_createtable_userpermissions.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\202205\SqlScripts\202205212252_createtable_usertokens.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\202205\SqlScripts\202205220723_createtable_useraccessroles.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\202205\SqlScripts\202205220724_createtable_sectors.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\202205\SqlScripts\202205220725_createtable_gardeners.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\202205\SqlScripts\202205220726_createtable_novelties.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\202205\SqlScripts\202205220727_createtable_ads.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\202205\SqlScripts\202205220733_createtable_sectorcredits.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\202205\SqlScripts\202205220735_createtable_appeals.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\202205\SqlScripts\202205220819_createtable_gardencontacts.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\202205\SqlScripts\202205220824_createtable_emergencycontacts.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\202205\SqlScripts\202205220835_createtable_configurationsettings.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\202205\SqlScripts\202205220732_createtable_sectorsales.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\202205\SqlScripts\202205220922_insertdata_superuser.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\202205\SqlScripts\202205220949_createtable_foreigncontacts.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentMigrator" Version="3.2.17" />
+    <PackageReference Include="FluentMigrator.Runner" Version="3.2.17" />
+    <PackageReference Include="FluentMigrator.Runner.Core" Version="3.2.17" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+    <PackageReference Include="Npgsql" Version="5.0.10" />
+    <PackageReference Include="Quartz" Version="3.3.3" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Configurations\DbConnections\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GC.EntityMachine\GC.EntitiesCore.csproj" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>

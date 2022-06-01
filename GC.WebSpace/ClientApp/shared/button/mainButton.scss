@@ -1,0 +1,39 @@
+$color: var(--main_color);
+$text_color: var(--text_color);
+
+.button{
+  border-color: transparent;
+  background: $color;
+  color: $text_color;
+}
+
+  .button:hover{
+    border-color: $color;
+    background-color: transparent;
+    color:$color;
+  }
+
+  .button:focus, .button.focus{
+      box-shadow: 0 0 0 0.2rem rgba($color: $color, $alpha: 0.5);
+  }
+
+  .button:disabled, .button.disabled {
+      color: $color;
+      background-color: lightgray;
+  }
+
+  .button:hover:disabled, .button.hover.disabled{
+    background: lightgray;
+    border-color: $color;
+  }
+
+  .button:not(:disabled):not(.disabled):active, .button:not(:disabled):not(.disabled).active, 
+  .button.dropdown-toggle{
+      background: $color;
+      border-color:$color;
+  }
+  
+  .button:not(:disabled):not(.disabled):active:focus, .button:not(:disabled):not(.disabled).active.focus, 
+  .button.dropdown-toggle:focus{
+    box-shadow: 0 0 0 0.2rem rgba($color: $color, $alpha: 0.5);
+  }

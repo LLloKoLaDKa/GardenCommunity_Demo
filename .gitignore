@@ -1,0 +1,26 @@
+*.orig
+*.refsignored
+*.cache
+*.user
+.suo
+.vs/
+.idea/
+Bin/
+/obj/
+[Bb]in/
+/Uploads/
+.suo
+/bin/
+syntax: glob
+obj/
+*.orig
+packages/
+*.refsignored
+*.user
+*.cache
+packages/*
+node_modules
+GC.WebSpace/wwwroot/dist
+GC.WebSpace/ClientApp/package-lock.json
+/.vscode/
+/publish

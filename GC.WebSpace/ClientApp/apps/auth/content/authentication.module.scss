@@ -1,0 +1,40 @@
+$main: var(--main_color);
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: $main;
+
+    .block {
+        padding: 37px 37px;
+        display: flex;
+        border-radius: 10px;
+        flex-direction: column;
+        align-items: center;
+        background: white;
+        gap: 5px;
+
+        .title {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    }
+}
+
+.main-container {
+    margin-bottom: 0px !important;
+}
+
+.version {
+    margin: 0 auto;
+    color: gray;
+    font-size: 16px;
+    margin-top: 5px;
+    transition: 0.4s;
+
+    &:hover {
+        transform: scale(1.4);
+    }
+}

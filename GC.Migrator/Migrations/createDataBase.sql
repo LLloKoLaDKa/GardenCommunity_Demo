@@ -1,0 +1,5 @@
+﻿CREATE LOGIN [garden_admin] WITH PASSWORD='95nJJara@x~B', DEFAULT_DATABASE=[garden_dev], DEFAULT_LANGUAGE=[русский], CHECK_EXPIRATION=OFF, CHECK_POLICY=ON
+CREATE DATABASE garden_dev
+
+CREATE USER npgsql_tests PASSWORD 'npgsql_tests' SUPERUSER;
+CREATE DATABASE npgsql_tests OWNER npgsql_tests;

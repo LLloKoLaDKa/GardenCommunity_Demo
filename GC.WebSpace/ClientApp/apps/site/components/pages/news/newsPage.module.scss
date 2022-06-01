@@ -1,0 +1,27 @@
+.news {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.fake_novelty {
+    width: calc((100% - 40px) / 3);
+
+    @media screen and (max-width: 700px) {
+        width: calc((100% - 20px) / 2);
+    }
+
+    @media screen and (max-width: 550px) {
+        width: 100%;
+    }
+}

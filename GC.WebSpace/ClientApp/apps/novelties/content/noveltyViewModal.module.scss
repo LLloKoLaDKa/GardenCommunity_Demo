@@ -1,0 +1,28 @@
+.view {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: cenb;
+
+        .date {
+            color: gray;
+        }
+    }
+
+    .description {
+        text-indent: 30px;
+    }
+
+    img {
+        width: calc(100% - 20px);
+        margin: 10px;
+    }
+
+    .contacts {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        color: gray;
+    }
+}

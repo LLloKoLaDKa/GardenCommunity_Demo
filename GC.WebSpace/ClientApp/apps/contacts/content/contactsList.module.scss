@@ -1,0 +1,73 @@
+$main_color: var(--main_color);
+
+.wrapper {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .header {
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    legend {
+        width: auto;
+        padding: 0px 2px;
+    }
+
+    .contact,
+    .contactAdding {
+        display: flex;
+        border: 1px dotted gray;
+        border-radius: 5px;
+        padding: 14px;
+        justify-content: center;
+        background: gainsboro;
+        cursor: pointer;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 35px;
+        margin-top: 10px;
+
+        .name,
+        .mobile_phone,
+        .city_phone {
+            text-align: center;
+        }
+    }
+
+    .second_column {
+        flex: 1;
+    }
+
+    .gardenContacts {
+        flex: 1;
+        min-width: 310px;
+    }
+
+    .gardeners {
+        flex: 1;
+
+        .gardener {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $main_color;
+            color: white;
+            border-radius: 5px;
+        }
+    }
+
+    .gardenContacts,
+    .gardeners {
+        flex: 1;
+        border: 1px solid $main_color;
+        border-radius: 5px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+}

@@ -1,0 +1,69 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+    <UserSecretsId>e87a6220-c91d-496b-8c4d-3d22ad25ff65</UserSecretsId>
+    <Configurations>Staging;Production;Development</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='Development'">
+    <RunWorkingDirectory>$(MSBuildProjectDirectory)</RunWorkingDirectory>
+    <AssemblyVersion>$([System.DateTime]::UtcNow.AddHours(3).ToString("yyyy.MM.dd.HHmm"))</AssemblyVersion>
+    <EnvironmentName>Development</EnvironmentName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='Staging'">
+    <AssemblyVersion>$([System.DateTime]::UtcNow.AddHours(3).ToString("yyyy.MM.dd.HHmm"))</AssemblyVersion>
+    <EnvironmentName>Staging</EnvironmentName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='Production'">
+    <AssemblyVersion>$([System.DateTime]::UtcNow.AddHours(3).ToString("yyyy.MM.dd.HHmm"))</AssemblyVersion>
+    <EnvironmentName>Production</EnvironmentName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ClientApps\**" />
+    <Compile Remove="ClientApp\**" />
+    <Content Remove="ClientApps\**" />
+    <Content Remove="ClientApp\**" />
+    <EmbeddedResource Remove="ClientApps\**" />
+    <EmbeddedResource Remove="ClientApp\**" />
+    <None Remove="ClientApps\**" />
+    <None Remove="ClientApp\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="..\Configurations\DbConnections\connectionStrings.Development.json" Link="Configurations\DbConnections\connectionStrings.Development.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Configurations\DbConnections\connectionStrings.Production.json" Link="Configurations\DbConnections\connectionStrings.Production.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Configurations\DbConnections\connectionStrings.Staging.json" Link="Configurations\DbConnections\connectionStrings.Staging.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+    <PackageReference Include="System.Runtime" Version="4.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GC.Domain\GC.Domain.csproj" />
+    <ProjectReference Include="..\GC.EntityMachine\GC.EntitiesCore.csproj" />
+    <ProjectReference Include="..\GC.Services.Configurator\GC.Services.Configurator.csproj" />
+    <ProjectReference Include="..\GC.Services\GC.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Configurations\DbConnections\" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>

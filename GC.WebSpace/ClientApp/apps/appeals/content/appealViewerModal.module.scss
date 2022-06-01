@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 18px;
+
+    .info {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+
+        span {
+            font-weight: 700;
+        }
+    }
+}

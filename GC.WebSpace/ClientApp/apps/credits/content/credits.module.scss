@@ -1,0 +1,13 @@
+.filters {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    @media screen and (max-width: 550px) {
+        flex-direction: column;
+    }
+
+    fieldset {
+        flex: 1
+    }
+}

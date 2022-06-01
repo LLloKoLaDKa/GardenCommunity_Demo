@@ -1,0 +1,202 @@
+$MAIN: var(--main_color);
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+
+    .info {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        .icon {
+            background: $MAIN;
+            color: white;
+            border-radius: 50%;
+            min-width: 30px;
+            min-height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .chairman {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        @media screen and (max-width: 650px) {
+            flex-direction: column;
+        }
+
+        .title {
+            font-weight: 500;
+            font-size: 22px;
+            text-align: center;
+        }
+
+        .contact {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+
+            .infos {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 30px;
+
+
+            }
+        }
+
+        .sendBlock {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            .combo {
+                display: flex;
+                flex-direction: row;
+                gap: 15px;
+            }
+
+            .error,
+            .success {
+                color: white;
+                border-radius: 10px;
+                width: fit-content;
+                text-align: center;
+                padding: 0px 30px;
+                display: flex;
+                justify-content: center;
+                margin: 0px auto;
+            }
+
+            .error {
+                background-color: red;
+            }
+
+            .success {
+                background-color: green;
+            }
+        }
+    }
+
+    .accountant {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+
+        .info {
+            width: calc((100% - 15px) / 4);
+            justify-content: center;
+
+            @media screen and (max-width: 920px) {
+                width: calc((100% - 5px) / 2);
+            }
+        }
+    }
+
+    .fakeAccountant {
+        width: 80%;
+        height: 30px !important;
+        margin: 0 auto;
+
+        @media screen and (max-width: 920px) {
+            width: calc((100% - 5px) / 2);
+            height: 65px !important;
+        }
+    }
+
+    .street_seniors {
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .street_contact {
+            display: flex;
+            width: calc((100% - 40px) / 2);
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+
+            @media screen and (max-width: 700px) {
+                width: 100%;
+            }
+
+            .title {
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+            .senior {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .empty_senior {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+    .foreign_contacts,
+    .emergency_contacts {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .contact {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: calc((100% - 40px) / 3);
+            align-items: center;
+
+            @media screen and (max-width: 800px) {
+                width: 100%;
+            }
+
+            .title {
+                font-size: 20px;
+                font-weight: 600;
+                text-align: center;
+            }
+
+            .empty_contact {
+                display: flex;
+                flex: 1;
+                align-items: center;
+                text-align: center;
+            }
+
+            .infos {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    }
+}
+
+.showButton {
+    color: var(--main_color);
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin-top: 10px;
+    cursor: pointer;
+}

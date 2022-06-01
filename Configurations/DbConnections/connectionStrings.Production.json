@@ -1,0 +1,3 @@
+{
+  "ConnectionString": "Server=server;Username=user;Database=garden;Port=5432;Password=password"
+}

@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Configurations>Staging;Development;Production</Configurations>
+	  <AssemblyVersion>$([System.DateTime]::Now.ToString("yyyy.MM.dd.HHmm"))</AssemblyVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GC.Configurator\GC.Configurator.csproj" />
+    <ProjectReference Include="..\GC.Domain\GC.Domain.csproj" />
+    <ProjectReference Include="..\GC.Services\GC.Services.csproj" />
+  </ItemGroup>
+
+</Project>

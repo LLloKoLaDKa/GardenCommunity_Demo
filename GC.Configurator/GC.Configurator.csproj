@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Configurations>Staging;Development;Production</Configurations>
+	  <AssemblyVersion>$([System.DateTime]::Now.ToString("yyyy.MM.dd.HHmm"))</AssemblyVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GC.Domain\GC.Domain.csproj" />
+    <ProjectReference Include="..\GC.EntityMachine\GC.EntitiesCore.csproj" />
+    <ProjectReference Include="..\GC.Tools\GC.Tools.csproj" />
+  </ItemGroup>
+
+</Project>

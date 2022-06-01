@@ -1,0 +1,49 @@
+$main_color: var(--main_color);
+$main_color_25: var(--main_color_25);
+$main_color_10: var(--main_color_10);
+$text_color: var(--text_color);
+
+.filters {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    @media screen and (max-width: 550px) {
+        flex-direction: column;
+    }
+
+    fieldset {
+        flex: 1
+    }
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 15px;
+    background-color: $main_color_10;
+    gap: 15px;
+    border-radius: 5px;
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid $main_color;
+        padding: 30px;
+        cursor: pointer;
+        transition: 0.3s;
+        background-color: $text_color;
+        border-radius: 5px;
+        height: auto;
+        align-items: center;
+
+        &:hover {
+            box-shadow: 0 2px 3px $main_color;
+        }
+
+        h5 {
+            flex: 2;
+            text-align: center;
+        }
+    }
+}

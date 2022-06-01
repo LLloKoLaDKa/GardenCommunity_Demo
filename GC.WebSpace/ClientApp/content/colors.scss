@@ -1,0 +1,21 @@
+:root {
+    --main_color: rgb(41, 90, 43);
+    --main_color_75: rgba(41, 90, 43, 0.75);
+    --main_color_50: rgba(41, 90, 43, 0.5);
+    --main_color_25: rgba(41, 90, 43, 0.25);
+    --main_color_15: rgba(41, 90, 43, 0.15);
+    --main_color_10: rgba(41, 90, 43, 0.10);
+    --secondary_color: rgb(33, 79, 35);
+    --delete-color: rgb(220, 20, 60);
+    --text_color: rgb(229, 229, 229);
+    --text_hover_color: rgb(255 242 107);
+    --icon_hover_color: rgba(255, 242, 107, 0.5);
+
+    // tools
+    --form_border_color: rgb(206, 212, 218);
+    --check-box-color: var(--main_color);
+    --form_text_color: var(--main_color);
+    --form_focus_border_color: transparent;
+    --form_hover_box_shadow: 0 0 3px 1px var(--main_color-50);
+    --form_hover_background_color: #e9ecef;
+}

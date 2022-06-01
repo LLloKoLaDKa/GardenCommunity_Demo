@@ -1,0 +1,40 @@
+$main_color: var(--main_color);
+$main_color_25: var(--main_color_25);
+$main_color_10: var(--main_color_10);
+
+.tab_nav {
+    display: flex;
+    gap: 2px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid $main_color_25;
+    margin-bottom: 10px;
+
+    .tab_nav_item,
+    .tab_nav_item_active {
+        flex: 1;
+        min-width: 260px;
+        text-align: center;
+        display: block;
+        user-select: none;
+        cursor: pointer;
+        transition: 0.2s;
+        margin-right: 2px;
+        padding: 2px 15px;
+        border-radius: 0.2rem 0.2rem 0 0;
+        background-color: $main_color_25;
+    }
+
+    .tab_nav_item_active {
+        transition: 0.5s;
+        color: white;
+        background-color: $main_color;
+    }
+}
+
+.disabled_tab {
+    background-color: lightgray !important;
+    border-color: gray !important;
+    cursor: not-allowed !important;
+}

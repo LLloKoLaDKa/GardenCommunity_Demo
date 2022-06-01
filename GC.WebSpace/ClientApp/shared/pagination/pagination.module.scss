@@ -1,0 +1,66 @@
+$pagination: var(--main_color);
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0px;
+
+    .total {
+        margin-right: 25px;
+        transition: 0.3s;
+    }
+
+    .page {
+        border: 0px;
+        font-size: 18px;
+        width: 50px;
+        min-width: 50px;
+        font-weight: 500;
+        text-align: center;
+        height: 40px;
+        margin: 5px;
+        display: flex;
+        align-items: center;
+    }
+
+    .prev_button,
+    .next_button {
+        background-color: transparent;
+        border: 0px solid $pagination;
+        color: $pagination;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        font-weight: 500;
+        font-size: 18;
+        transition: 0.3s;
+        outline: none;
+        font-size: 14px;
+        &:hover {
+            transition: 0.3s;
+            box-shadow: 1px 1px 5px $pagination, inset 1px 1px 5px lightgray;
+        }
+    }
+
+    .page_size {
+        background-color: #fff;
+        border: 1px solid $pagination;
+        border-radius: 5px;
+        width: 60px;
+        height: 40px;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+        outline: none;
+        &:hover {
+            transition: 0.3s;
+            box-shadow: 0 0 5px $pagination;
+        }
+    }
+
+    .pages{
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+    }
+}

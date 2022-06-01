@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "removeComments": true,
+        "outDir": "js",
+        "sourceMap": true,
+        "jsx": "react",
+        "lib": ["dom", "esnext", "DOM.Iterable"],
+        "module": "esnext",
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "strict": true,
+        
+        
+    },
+    "exclude": ["node_modules"]
+}
